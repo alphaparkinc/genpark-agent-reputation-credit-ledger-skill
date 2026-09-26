@@ -1,0 +1,41 @@
+{
+  "name": "genpark-agent-reputation-credit-ledger-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Verifiable agent reputation ledger tracking cryptographic task receipts and enforcing slashable staking penalties for underperformance.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "agentic-governance",
+  "tags": [
+    "agent-reputation",
+    "credit-ledger",
+    "staking-penalties",
+    "cryptographic-receipts",
+    "swarm-governance"
+  ],
+  "inputs": {
+    "worker_agent_id": {
+      "type": "string",
+      "default": "agent_solidity_auditor_v4"
+    },
+    "current_staked_bond_usd": {
+      "type": "number",
+      "default": 5000.0
+    }
+  },
+  "outputs": {
+    "ledger_id": {
+      "type": "string"
+    },
+    "updated_reputation_score": {
+      "type": "number"
+    },
+    "staked_bond_usd": {
+      "type": "number"
+    },
+    "trust_verdict": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
